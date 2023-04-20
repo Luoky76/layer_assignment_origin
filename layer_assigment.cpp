@@ -44,7 +44,6 @@ void CIRCUIT::initialLA(){
     //time = ((e_t.tv_sec*1000000)+e_t.tv_usec)-((s_t.tv_sec*1000000)+s_t.tv_usec);
     //time /= 1000000;
     //cout << "done initalLA , runtime: " << time << endl;
-
     chrono::duration<double> time_span = chrono::duration_cast<chrono::duration<double> >(ETc - STc);
     cout << "done initalLA , runtime: " << time_span.count() << " (s)" << endl;
     

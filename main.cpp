@@ -45,8 +45,7 @@ int main(int argc, char* argv[]) {
     
     //printf("time: %lf \n" ,time/1000000);
     //打印间隔时间
-    std::cout << "Ctime: " << time_span.count() << " (s)" << endl;
+    std::cout << "Ctime: " << time_span.count() << " (s)" << std::endl;
 
     return 0;
 }
- 
