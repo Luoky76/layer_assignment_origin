@@ -3,7 +3,10 @@
  *
 */
 
-#pragma comment(linker,"/STACK:16777216")   //手动开栈
+//手动开栈
+// 16777216 = 1024*1024*16 -> 16m // 33554432 = 1024*1024*32 -> 32m
+// 1024*1024*128 = 134217728 -> 128m // 268435456 , 1073741824 = 1Gb
+#pragma comment(linker,"/STACK:16777216")
 
 #include "parameter.h"
 #include "database.h"

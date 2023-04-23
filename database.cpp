@@ -514,14 +514,27 @@ void NET::splitsegmentto2pinsegment(vector<SEGMENT> &_segments, int mode){
                 }
             }
             if(havecross){
-                if(_segments.size()>1000){
-                    int level = segtmp.layer;
-                    int tmp = data[segtmp.x/32][segtmp.y/40]%rounding(pow(10,level));
-                    if(tmp < rounding(pow(10,level-1))){
-                        crosspoint.push_back(segtmp);
-                        data[segtmp.x/32][segtmp.y/40] += rounding(pow(10,level-1));
-
+                if(_segments.size()>1000) {
+                    cout << "segtmp.x/32 = " << segtmp.x/32 << endl;
+                    cout << "segtmp.y/32 = " << segtmp.y/32 << endl;
+                    cout << "x dimension lenth = " << sizeof(data)/sizeof(data[0]) << endl;
+                    cout << "y dimension lenth = " << sizeof(data[0])/sizeof(int);
+                    try {
+                        int level = segtmp.layer;
+                        int tmp = data[segtmp.x/32][segtmp.y/40]%rounding(pow(10,level));
+                        if(tmp < rounding(pow(10,level-1))){
+                            crosspoint.push_back(segtmp);
+                            data[segtmp.x/32][segtmp.y/40] += rounding(pow(10,level-1));
+                        }
+                    } catch (string e)
+                    {
+                        cout << e << endl;
+                        cout << "segtmp.x/32 = " << segtmp.x/32 << endl;
+                        cout << "segtmp.y/32 = " << segtmp.y/32 << endl;
+                        cout << "x dimension lenth = " << sizeof(data)/sizeof(data[0]) << endl;
+                        cout << "y dimension lenth = " << sizeof(data[0])/sizeof(int);
                     }
+
                 }
                 else{
                     crosspoint.push_back(segtmp);
