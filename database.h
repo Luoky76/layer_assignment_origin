@@ -60,6 +60,10 @@ public:
     int layer;
     int x;
     int y;
+    SEGMENT_POINT ()
+    {
+        x = y = layer = 0;
+    }
 };
 
 class SEGMENT{//layer assignment result of a net
