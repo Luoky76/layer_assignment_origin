@@ -296,16 +296,13 @@ public:
         else if(mainmode==1){
 
             computeaveragedensity();
-            
 			
-			cout << "start inital dp layer assignment\n";
+			cout << "start initial dp layer assignment\n";
             //double tmp = Miu;
             //Miu=0;//variable of congestion cost
-			Lambda = 10; Beta = 1; Miu = 1; parallelmode = 0;//ע�⣺Miu=1
+			Lambda = 10; Beta = 1; Miu = 1; parallelmode = 0;//注意：Miu=1
             initialLA();
 			//Miu = tmp; 
-            
-			
 						
 			cout << "start RRA\n";
 			Lambda = 10; Beta = 1; Miu = 1; parallelmode = 0;
