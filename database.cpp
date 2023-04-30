@@ -432,6 +432,7 @@ void NET::splitsegmentto2pinsegment(vector<SEGMENT> &_segments, int mode){
     vector<SEGMENT_POINT> crosspoint;
     for(int i=0;i<_segments.size()-1;i++){
         for(int j=i+1;j<_segments.size();j++){
+            //segtmp 原本无初值，而导致数组越界，现已添加构造函数
             SEGMENT_POINT segtmp;
             bool havecross;
             havecross = false;

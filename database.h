@@ -64,6 +64,7 @@ public:
     int layer;
     int x;
     int y;
+    //新增构造函数
     SEGMENT_POINT ()
     {
         x = y = layer = 0;
